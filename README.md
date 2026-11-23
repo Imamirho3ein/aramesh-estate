@@ -18,6 +18,38 @@
 
 ---
 
+## تصاویر دمو
+
+روی هر تصویر بزنید تا نسخه‌ی کامل و صفحه‌ی زنده‌ی همان بخش باز شود.
+
+### صفحه‌ی انتخاب پکیج
+
+[![صفحه‌ی انتخاب پکیج](docs/screenshots/01-hub.jpg)](https://imamirho3ein.github.io/aramesh-estate/)
+
+### پکیج ۱ — کلاسیک
+
+| صفحه‌ی اصلی | لیست املاک |
+| :---: | :---: |
+| [![صفحه‌ی اصلی کلاسیک](docs/screenshots/02-classic-home.jpg)](https://imamirho3ein.github.io/aramesh-estate/classic/)<br>**صفحه‌ی اصلی** | [![لیست املاک کلاسیک](docs/screenshots/03-classic-properties.jpg)](https://imamirho3ein.github.io/aramesh-estate/classic/properties/)<br>**لیست املاک با فیلتر** |
+| [![جزئیات ملک کلاسیک](docs/screenshots/04-classic-property.jpg)](https://imamirho3ein.github.io/aramesh-estate/classic/properties/p1/)<br>**جزئیات ملک و گالری** | [![داشبورد مدیریت](docs/screenshots/05-classic-dashboard.jpg)](https://imamirho3ein.github.io/aramesh-estate/classic/dashboard/)<br>**داشبورد مدیریت** |
+
+### پکیج ۲ — هوشمند
+
+| صفحه‌ی اصلی | جست‌وجوی هوشمند |
+| :---: | :---: |
+| [![صفحه‌ی اصلی هوشمند](docs/screenshots/06-smart-home.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/)<br>**صفحه‌ی اصلی** | [![جست‌وجوی هوشمند](docs/screenshots/07-smart-explore.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/explore/)<br>**جست‌وجو، فیلتر و نقشه** |
+| [![جزئیات ملک و تور ۳۶۰](docs/screenshots/08-smart-property-360.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/properties/p1/)<br>**جزئیات ملک + تور ۳۶۰** | [![مقایسه‌ی هوشمند](docs/screenshots/09-smart-compare.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/compare/)<br>**مقایسه‌ی هوشمند** |
+| [![جدول مقایسه](docs/screenshots/09b-smart-compare-table.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/compare/)<br>**جدول مقایسه و امتیاز هوشمند** | [![پنل مشتری](docs/screenshots/10-smart-account.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/account/)<br>**پنل مشتری** |
+| [![CRM](docs/screenshots/11-smart-crm.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/crm/)<br>**CRM و آمار فروش** | [![قیف فروش](docs/screenshots/11b-smart-crm-board.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/crm/)<br>**قیف فروش و کارت سرنخ‌ها** |
+
+### نمای موبایل
+
+| هاب | کلاسیک | هوشمند |
+| :---: | :---: | :---: |
+| [![هاب در موبایل](docs/screenshots/12-mobile-hub.jpg)](https://imamirho3ein.github.io/aramesh-estate/) | [![کلاسیک در موبایل](docs/screenshots/13-mobile-classic.jpg)](https://imamirho3ein.github.io/aramesh-estate/classic/) | [![هوشمند در موبایل](docs/screenshots/14-mobile-smart.jpg)](https://imamirho3ein.github.io/aramesh-estate/smart/) |
+
+---
+
 ## اجرا
 
 ```bash
