@@ -25,6 +25,12 @@ import { PropertyCardClassic } from "@/components/property-cards";
 import { getConsultant, getProperty, properties } from "@/lib/data";
 import { categoryLabels, dealLabels, fa } from "@/lib/utils";
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return properties.map((property) => ({ id: property.id }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const property = getProperty(id);

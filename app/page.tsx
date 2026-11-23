@@ -16,6 +16,7 @@ import {
 import { Container } from "@/components/ui/layout";
 import { Logo } from "@/components/ui/logo";
 import { Reveal } from "@/components/ui/reveal";
+import { asset } from "@/lib/asset";
 
 const classicFeatures = [
   "طراحی واکنش‌گرا برای موبایل، تبلت و کامپیوتر",
@@ -64,7 +65,7 @@ function MiniBrowser() {
         </span>
       </div>
       <div className="relative aspect-[16/10]">
-        <img src="/images/villa-2.jpg" alt="پیش‌نمایش سایت کلاسیک" className="size-full object-cover" />
+        <img src={asset("/images/villa-2.jpg")} alt="پیش‌نمایش سایت کلاسیک" className="size-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-black/20" />
         <div className="absolute inset-x-3 top-3 flex items-center justify-between">
           <span className="rounded-full bg-white/90 px-2.5 py-1 text-[8px] font-bold text-[#0e5a4a]">
@@ -85,7 +86,7 @@ function MiniBrowser() {
       <div className="grid grid-cols-3 gap-1.5 p-3">
         {["villa-4", "living-1", "interior-3"].map((im) => (
           <div key={im} className="overflow-hidden rounded-lg border border-black/5 bg-white">
-            <img src={`/images/${im}.jpg`} alt="" className="h-10 w-full object-cover" />
+            <img src={asset(`/images/${im}.jpg`)} alt="" className="h-10 w-full object-cover" />
             <div className="p-1.5">
               <div className="h-1 w-8 rounded bg-black/20" />
               <div className="mt-1 h-1 w-5 rounded bg-black/10" />
@@ -110,7 +111,7 @@ function SmartPreview() {
         </span>
       </div>
       <div className="relative aspect-[16/10]">
-        <img src="/images/interior-6.jpg" alt="پیش‌نمایش سامانه هوشمند" className="size-full object-cover" />
+        <img src={asset("/images/interior-6.jpg")} alt="پیش‌نمایش سامانه هوشمند" className="size-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#06090c] via-[#06090c]/20 to-transparent" />
         <div className="absolute right-3 top-3 flex gap-1">
           <span className="flex items-center gap-1 rounded-full border border-white/15 bg-black/45 px-2 py-1 text-[7px] text-white backdrop-blur">
@@ -139,7 +140,7 @@ function SmartPreview() {
           {["villa-1", "living-2", "interior-2"].map((im) => (
             <img
               key={im}
-              src={`/images/${im}.jpg`}
+              src={asset(`/images/${im}.jpg`)}
               alt=""
               className="size-6 rounded-full border border-[#0c1116] object-cover"
             />
@@ -293,7 +294,7 @@ export default function HubPage() {
                 <article className="group relative h-full overflow-hidden rounded-[1.8rem] border border-[#e3dbcb] bg-[#f7f4ed] text-[#14201b] transition duration-500 hover:-translate-y-1.5 hover:shadow-[0_35px_90px_-30px_rgba(0,0,0,0.7)]">
                   <div className="relative h-56 overflow-hidden">
                     <img
-                      src="/images/villa-3.jpg"
+                      src={asset("/images/villa-3.jpg")}
                       alt="پکیج ۱"
                       className="size-full object-cover transition duration-700 group-hover:scale-105"
                     />
@@ -346,7 +347,7 @@ export default function HubPage() {
                   <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
                   <div className="relative h-56 overflow-hidden">
                     <img
-                      src="/images/interior-6.jpg"
+                      src={asset("/images/interior-6.jpg")}
                       alt="پکیج ۲"
                       className="size-full object-cover transition duration-700 group-hover:scale-105"
                     />

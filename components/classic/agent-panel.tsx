@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import { AreaChart, ProgressBar } from "@/components/charts";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import { consultants, leads, monthlyPerformance, properties } from "@/lib/data";
 import type { Property, PropertyStatus } from "@/lib/types";
 import { cn, fa, formatPriceShort, propertyPrice, statusLabels } from "@/lib/utils";
@@ -297,7 +298,7 @@ export function AgentPanel() {
             <div className="divide-y divide-line">
               {myListings.map((p) => (
                 <div key={p.id} className="flex flex-wrap items-center gap-3 px-4 py-3">
-                  <img src={p.images[0]} alt="" className="size-12 rounded-xl object-cover" />
+                  <img src={asset(p.images[0])} alt="" className="size-12 rounded-xl object-cover" />
                   <div className="min-w-0 flex-1">
                     <div className="truncate text-[10.5px] font-semibold">{p.title}</div>
                     <div className="mt-0.5 flex items-center gap-2 text-[8px] text-muted">

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpLeft, Bot, Loader2, Mic, Sparkles, WandSparkles } from "lucide-react";
+import { asset } from "@/lib/asset";
 import { assistantReply } from "@/lib/assistant";
 import { getProperty } from "@/lib/data";
 import { fa, propertyPrice } from "@/lib/utils";
@@ -125,7 +126,7 @@ export function SmartHeroSearch() {
                       href={`/smart/properties/${id}`}
                       className="flex items-center gap-2 rounded-xl border border-line bg-white/[0.02] p-2 transition hover:border-accent/30"
                     >
-                      <img src={p.images[0]} alt={p.title} className="size-10 rounded-lg object-cover" />
+                      <img src={asset(p.images[0])} alt={p.title} className="size-10 rounded-lg object-cover" />
                       <div className="min-w-0 flex-1">
                         <div className="truncate text-[9.5px] font-bold">{p.title}</div>
                         <div className="mt-0.5 text-[8px] text-muted">{p.district} · {fa(p.area)} متر</div>

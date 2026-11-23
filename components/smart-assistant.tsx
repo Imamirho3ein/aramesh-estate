@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpLeft, Bot, Maximize2, Send, Sparkles, X } from "lucide-react";
+import { asset } from "@/lib/asset";
 import { assistantReply, initialAssistantMessage } from "@/lib/assistant";
 import { getProperty } from "@/lib/data";
 import { fa, propertyPrice } from "@/lib/utils";
@@ -18,7 +19,7 @@ function MiniProperty({ id }: { id: string }) {
       href={`/smart/properties/${p.id}`}
       className="group flex items-center gap-2.5 rounded-xl border border-line bg-surface/70 p-2 transition hover:border-accent/35"
     >
-      <img src={p.images[0]} alt={p.title} className="size-12 rounded-lg object-cover" />
+      <img src={asset(p.images[0])} alt={p.title} className="size-12 rounded-lg object-cover" />
       <div className="min-w-0 flex-1">
         <div className="truncate text-[11px] font-bold text-ink">{p.title}</div>
         <div className="mt-0.5 flex items-center gap-1.5 text-[9px] text-muted">
@@ -232,7 +233,7 @@ export function SmartAssistant() {
                 <X size={15} />
               </button>
             </div>
-            <ChatBody onExpand={() => (window.location.href = "/smart/explore#assistant")} />
+            <ChatBody onExpand={() => (window.location.href = asset("/smart/explore#assistant"))} />
           </div>
         ) : null}
 

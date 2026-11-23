@@ -32,6 +32,7 @@ import { AssistantEmbedded } from "@/components/smart-assistant";
 import { PanoramaViewer } from "@/components/smart/panorama";
 import { TehranMap } from "@/components/smart/tehran-map";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { asset } from "@/lib/asset";
 import { properties } from "@/lib/data";
 import { fa, propertyPrice } from "@/lib/utils";
 
@@ -123,7 +124,7 @@ export default function SmartHomePage() {
             <div className="pointer-events-none absolute -right-6 top-1/4 size-24 rounded-full border border-accent/20" />
             <div className="relative overflow-hidden rounded-[2rem] border border-line bg-surface">
               <img
-                src="/images/villa-2.jpg"
+                src={asset("/images/villa-2.jpg")}
                 alt="ویلای لوکس با استخر"
                 className="h-[440px] w-full object-cover sm:h-[520px]"
               />
@@ -333,7 +334,7 @@ export default function SmartHomePage() {
           <Reveal>
             <div className="grid gap-4 lg:grid-cols-[1.35fr_0.65fr]">
               <PanoramaViewer
-                image="/images/panorama.jpg"
+                image={asset("/images/panorama.jpg")}
                 title="پنت‌هاوس زعفرانیه"
                 className="aspect-[16/9] w-full"
                 hotspots={[
@@ -543,7 +544,7 @@ export default function SmartHomePage() {
                   </div>
                   <div className="mt-3 flex gap-1.5">
                     {["/images/villa-2.jpg", "/images/interior-6.jpg", "/images/villa-4.jpg"].map((im) => (
-                      <img key={im} src={im} alt="" className="h-14 flex-1 rounded-lg object-cover" />
+                      <img key={im} src={asset(im)} alt="" className="h-14 flex-1 rounded-lg object-cover" />
                     ))}
                   </div>
                 </Link>

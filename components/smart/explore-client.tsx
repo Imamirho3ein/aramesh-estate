@@ -26,6 +26,7 @@ import { AssistantEmbedded } from "@/components/smart-assistant";
 import { TehranMap } from "@/components/smart/tehran-map";
 import { amenityOptions, properties } from "@/lib/data";
 import { assistantReply } from "@/lib/assistant";
+import { asset } from "@/lib/asset";
 import {
   categoryLabels,
   cn,
@@ -682,7 +683,7 @@ export function SmartExplore() {
                     >
                       <div className="relative h-44 shrink-0 overflow-hidden rounded-xl sm:h-36 sm:w-56">
                         <img
-                          src={p.images[0]}
+                          src={asset(p.images[0])}
                           alt={p.title}
                           className="size-full object-cover transition duration-700 group-hover:scale-105"
                         />

@@ -47,6 +47,7 @@ import {
 } from "lucide-react";
 import { AreaChart, BarList, Donut, Funnel, ProgressBar } from "@/components/charts";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import {
   consultants,
   districtPrices,
@@ -463,7 +464,7 @@ export function ClassicDashboard() {
                       <div className="mt-3 space-y-2.5">
                         {properties.slice(0, 3).map((p) => (
                           <div key={p.id} className="flex items-center gap-2.5">
-                            <img src={p.images[0]} alt="" className="size-10 rounded-lg object-cover" />
+                            <img src={asset(p.images[0])} alt="" className="size-10 rounded-lg object-cover" />
                             <div className="min-w-0 flex-1">
                               <div className="truncate text-[10px] font-semibold">{p.title}</div>
                               <div className="mt-0.5 text-[8px] text-muted">
@@ -601,7 +602,7 @@ export function ClassicDashboard() {
                           <tr key={p.id} className="transition hover:bg-[#faf8f2]/60">
                             <td className="px-4 py-3">
                               <div className="flex items-center gap-2.5">
-                                <img src={p.images[0]} alt="" className="size-10 rounded-lg object-cover" />
+                                <img src={asset(p.images[0])} alt="" className="size-10 rounded-lg object-cover" />
                                 <div>
                                   <div className="max-w-[190px] truncate text-[10px] font-semibold">{p.title}</div>
                                   <div className="mt-0.5 flex items-center gap-1 text-[8px] text-muted">
@@ -1074,7 +1075,7 @@ export function ClassicDashboard() {
                     >
                       <div className="relative aspect-[16/8] overflow-hidden">
                         <img
-                          src={["/images/interior-3.jpg", "/images/living-1.jpg", "/images/interior-2.jpg", "/images/living-2.jpg"][i]}
+                          src={asset(["/images/interior-3.jpg", "/images/living-1.jpg", "/images/interior-2.jpg", "/images/living-2.jpg"][i])}
                           alt={v.title}
                           className="size-full object-cover transition duration-700 group-hover:scale-105"
                         />
@@ -1343,7 +1344,7 @@ export function ClassicDashboard() {
           <button type="button" aria-label="بستن" onClick={() => setVideoOpen(null)} className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
           <div className="animate-fade-up relative w-full max-w-2xl overflow-hidden rounded-[1.4rem] border border-line bg-[#0b2f27] text-white shadow-2xl">
             <div className="relative aspect-video">
-              <img src="/images/interior-2.jpg" alt="" className="size-full object-cover opacity-40" />
+              <img src={asset("/images/interior-2.jpg")} alt="" className="size-full object-cover opacity-40" />
               <div className="absolute inset-0 grid place-items-center">
                 <span className="grid size-16 place-items-center rounded-full bg-white/10 backdrop-blur">
                   <Play size={28} fill="white" className="ms-1 text-white" />

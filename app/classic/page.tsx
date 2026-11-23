@@ -21,6 +21,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { HomeSearch } from "@/components/classic/home-search";
 import { PropertyCardClassic } from "@/components/property-cards";
 import { FaqAccordion } from "@/components/faq-accordion";
+import { asset } from "@/lib/asset";
 import { consultants, districts, properties } from "@/lib/data";
 import { fa } from "@/lib/utils";
 
@@ -154,7 +155,7 @@ export default function ClassicHomePage() {
             <div className="absolute inset-x-6 bottom-6 top-10 rounded-t-full border border-[#c19a4b]/30" />
             <div className="relative mx-auto h-[430px] w-[88%] overflow-hidden rounded-t-full rounded-b-[2rem] border-[7px] border-white bg-surface2 shadow-[0_35px_90px_-30px_rgba(20,32,27,0.45)] sm:h-[500px]">
               <img
-                src="/images/villa-2.jpg"
+                src={asset("/images/villa-2.jpg")}
                 alt="ویلای لوکس با استخر در تهران"
                 className="size-full object-cover"
               />
@@ -194,7 +195,7 @@ export default function ClassicHomePage() {
             <div className="animate-floaty-slow absolute -bottom-4 left-2 z-10 w-[235px] rounded-2xl border border-line bg-white p-2.5 shadow-[0_20px_50px_-20px_rgba(20,32,27,0.35)] sm:-left-4">
               <div className="flex items-center gap-2.5">
                 <img
-                  src="/images/villa-4.jpg"
+                  src={asset("/images/villa-4.jpg")}
                   alt="پیشنهاد ویژه"
                   className="size-14 rounded-xl object-cover"
                 />
@@ -292,7 +293,7 @@ export default function ClassicHomePage() {
                 >
                   <div className="aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
                     <img
-                      src={district.image}
+                      src={asset(district.image)}
                       alt={district.name}
                       loading="lazy"
                       className="size-full object-cover transition duration-700 group-hover:scale-110"
@@ -322,7 +323,7 @@ export default function ClassicHomePage() {
               <div className="grid grid-cols-2 gap-3">
                 <div className="overflow-hidden rounded-[1.4rem] border border-line">
                   <img
-                    src="/images/interior-2.jpg"
+                    src={asset("/images/interior-2.jpg")}
                     alt="طراحی داخلی کلاسیک"
                     loading="lazy"
                     className="aspect-[3/4] w-full object-cover"
@@ -331,7 +332,7 @@ export default function ClassicHomePage() {
                 <div className="mt-8 space-y-3">
                   <div className="overflow-hidden rounded-[1.4rem] border border-line">
                     <img
-                      src="/images/living-1.jpg"
+                      src={asset("/images/living-1.jpg")}
                       alt="نشیمن روشن"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
@@ -339,7 +340,7 @@ export default function ClassicHomePage() {
                   </div>
                   <div className="overflow-hidden rounded-[1.4rem] border border-line">
                     <img
-                      src="/images/villa-3.jpg"
+                      src={asset("/images/villa-3.jpg")}
                       alt="ویلای مدرن"
                       loading="lazy"
                       className="aspect-[4/3] w-full object-cover"

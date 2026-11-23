@@ -31,6 +31,7 @@ import {
 import { Container } from "@/components/ui/layout";
 import { PropertyCardSmart } from "@/components/property-cards";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import {
   getConsultant,
   getProperty,
@@ -342,7 +343,7 @@ export function SmartAccount() {
                       >
                         <div className="relative aspect-[16/10] overflow-hidden">
                           <img
-                            src={p.images[0]}
+                            src={asset(p.images[0])}
                             alt={p.title}
                             className="size-full object-cover transition duration-500 group-hover:scale-105"
                           />
@@ -444,7 +445,7 @@ export function SmartAccount() {
                       href={`/smart/properties/${p.id}`}
                       className="flex items-center gap-2 rounded-lg border border-line bg-white/[0.02] p-1.5 transition hover:border-accent/30"
                     >
-                      <img src={p.images[0]} alt="" className="size-8 rounded-md object-cover" />
+                      <img src={asset(p.images[0])} alt="" className="size-8 rounded-md object-cover" />
                       <div className="min-w-0 flex-1">
                         <div className="truncate text-[8.5px] font-semibold">{p.title}</div>
                         <div className="text-[7.5px] text-accent">{propertyPrice(p).main}</div>
@@ -558,7 +559,7 @@ export function SmartAccount() {
                       href={`/smart/properties/${p.id}`}
                       className="group overflow-hidden rounded-xl border border-line bg-white/[0.02] text-start transition hover:border-accent/30"
                     >
-                      <img src={p.images[0]} alt={p.title} className="aspect-[16/10] w-full object-cover" />
+                      <img src={asset(p.images[0])} alt={p.title} className="aspect-[16/10] w-full object-cover" />
                       <div className="p-2.5">
                         <div className="truncate text-[9px] font-bold">{p.title}</div>
                         <div className="mt-0.5 text-[8px] text-accent">{propertyPrice(p).main}</div>
@@ -593,7 +594,7 @@ export function SmartAccount() {
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {compareProps.map((p) => (
                   <div key={p.id} className="overflow-hidden rounded-xl border border-line bg-surface/40">
-                    <img src={p.images[0]} alt={p.title} className="aspect-[16/9] w-full object-cover" />
+                    <img src={asset(p.images[0])} alt={p.title} className="aspect-[16/9] w-full object-cover" />
                     <div className="p-3">
                       <div className="flex items-start justify-between gap-2">
                         <div>

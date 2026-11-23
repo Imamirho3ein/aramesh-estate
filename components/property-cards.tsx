@@ -15,6 +15,7 @@ import {
   Star,
 } from "lucide-react";
 import type { Property } from "@/lib/types";
+import { asset } from "@/lib/asset";
 import {
   categoryLabels,
   cn,
@@ -50,7 +51,7 @@ export function PropertyCardClassic({
         )}
       >
         <img
-          src={property.images[0]}
+          src={asset(property.images[0])}
           alt={property.title}
           loading="lazy"
           className="size-full object-cover transition-transform duration-[1.1s] ease-out group-hover:scale-[1.06]"
@@ -166,7 +167,7 @@ export function PropertyCardSmart({ property }: { property: Property }) {
     <article className="group relative overflow-hidden rounded-[1.4rem] border border-line bg-surface/70 card-lift hover:border-accent/35 hover:shadow-[0_24px_70px_-28px_rgba(200,244,90,0.18)]">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
-          src={property.images[0]}
+          src={asset(property.images[0])}
           alt={property.title}
           loading="lazy"
           className="size-full object-cover transition-transform duration-[1.1s] ease-out group-hover:scale-[1.06]"

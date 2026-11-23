@@ -38,6 +38,7 @@ import {
 import { AreaChart, BarList, Donut, Funnel, ProgressBar } from "@/components/charts";
 import { Container, Eyebrow } from "@/components/ui/layout";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import {
   consultants,
   crmStages,
@@ -808,7 +809,7 @@ export function SmartCrm() {
                 >
                   <div className="relative aspect-[16/8] overflow-hidden">
                     <img
-                      src={["/images/interior-3.jpg", "/images/living-1.jpg", "/images/interior-2.jpg", "/images/living-2.jpg"][i]}
+                      src={asset(["/images/interior-3.jpg", "/images/living-1.jpg", "/images/interior-2.jpg", "/images/living-2.jpg"][i])}
                       alt={v.title}
                       className="size-full object-cover transition duration-700 group-hover:scale-105"
                     />
@@ -1214,7 +1215,7 @@ export function SmartCrm() {
           />
           <div className="animate-fade-up relative w-full max-w-2xl overflow-hidden rounded-[1.5rem] border border-line bg-[#080d11] shadow-2xl">
             <div className="relative aspect-video">
-              <img src="/images/interior-2.jpg" alt="" className="size-full object-cover opacity-40" />
+              <img src={asset("/images/interior-2.jpg")} alt="" className="size-full object-cover opacity-40" />
               <div className="absolute inset-0 grid place-items-center">
                 <span className="grid size-16 place-items-center rounded-full bg-accent text-[#0a0f0c]">
                   <Play size={27} fill="currentColor" className="ms-1" />

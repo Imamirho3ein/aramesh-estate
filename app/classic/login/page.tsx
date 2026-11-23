@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/layout";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 const roles = [
@@ -167,7 +168,7 @@ export default function LoginPage() {
 
         <div className="relative hidden overflow-hidden bg-[#0b2f27] lg:block">
           <img
-            src="/images/interior-2.jpg"
+            src={asset("/images/interior-2.jpg")}
             alt="فضای داخلی لوکس"
             className="size-full object-cover opacity-70"
           />

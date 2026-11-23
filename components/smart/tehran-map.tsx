@@ -13,6 +13,7 @@ import {
   Ruler,
   X,
 } from "lucide-react";
+import { asset } from "@/lib/asset";
 import type { Property } from "@/lib/types";
 import { cn, fa, propertyPrice } from "@/lib/utils";
 
@@ -203,7 +204,7 @@ export function TehranMap({
           <div className="animate-fade-up overflow-hidden rounded-2xl border border-white/10 bg-[#0a1015]/95 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.8)] backdrop-blur-xl">
             <div className="flex gap-3 p-3">
               <img
-                src={selectedProperty.images[0]}
+                src={asset(selectedProperty.images[0])}
                 alt={selectedProperty.title}
                 className="size-16 shrink-0 rounded-xl object-cover"
               />

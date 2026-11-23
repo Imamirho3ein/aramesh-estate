@@ -15,6 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import { getConsultant } from "@/lib/data";
 import type { Property } from "@/lib/types";
 import { cn, fa, formatPriceFull, pricePerMeter, propertyPrice } from "@/lib/utils";
@@ -44,7 +45,7 @@ export function Gallery({ property }: { property: Property }) {
           className="group relative aspect-[16/11] overflow-hidden rounded-[1.4rem] border border-line bg-surface2 text-start sm:aspect-auto sm:min-h-[380px]"
         >
           <img
-            src={images[active]}
+            src={asset(images[active])}
             alt={property.title}
             className="size-full object-cover transition duration-700 group-hover:scale-[1.03]"
           />
@@ -72,7 +73,7 @@ export function Gallery({ property }: { property: Property }) {
                 active === i ? "border-accent" : "border-transparent hover:border-accent/40",
               )}
             >
-              <img src={image} alt={`${property.title} ${i + 1}`} className="size-full object-cover" />
+              <img src={asset(image)} alt={`${property.title} ${i + 1}`} className="size-full object-cover" />
               {i === 3 && images.length > 4 ? (
                 <span className="absolute inset-0 grid place-items-center bg-black/55 text-xs font-bold text-white">
                   +{fa(images.length - 4)} عکس
@@ -106,7 +107,7 @@ export function Gallery({ property }: { property: Property }) {
               <ChevronRight size={22} />
             </button>
             <img
-              src={images[active]}
+              src={asset(images[active])}
               alt={property.title}
               className="max-h-full max-w-full rounded-2xl object-contain"
             />
@@ -130,7 +131,7 @@ export function Gallery({ property }: { property: Property }) {
                   active === i ? "border-accent" : "border-transparent opacity-60",
                 )}
               >
-                <img src={image} alt="" className="size-full object-cover" />
+                <img src={asset(image)} alt="" className="size-full object-cover" />
               </button>
             ))}
           </div>

@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { Container, Eyebrow } from "@/components/ui/layout";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import { getConsultant, getProperty, properties } from "@/lib/data";
 import type { Property } from "@/lib/types";
 import {
@@ -326,7 +327,7 @@ export function SmartCompare() {
                         <th key={p.id} className="min-w-[190px] border-r border-line px-3 py-3 align-top">
                           <div className="relative overflow-hidden rounded-xl border border-line">
                             <img
-                              src={p.images[0]}
+                              src={asset(p.images[0])}
                               alt={p.title}
                               className="aspect-[16/10] w-full object-cover"
                             />
@@ -477,7 +478,7 @@ export function SmartCompare() {
                   >
                     <div className="relative aspect-[16/9] overflow-hidden">
                       <img
-                        src={p.images[0]}
+                        src={asset(p.images[0])}
                         alt={p.title}
                         className="size-full object-cover transition duration-500 group-hover:scale-105"
                       />

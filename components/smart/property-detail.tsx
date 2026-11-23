@@ -28,6 +28,7 @@ import {
   X,
 } from "lucide-react";
 import { useApp } from "@/components/providers";
+import { asset } from "@/lib/asset";
 import { PanoramaViewer } from "@/components/smart/panorama";
 import { districtPrices, getConsultant } from "@/lib/data";
 import type { Property } from "@/lib/types";
@@ -97,7 +98,7 @@ export function SmartGallery({ property }: { property: Property }) {
             className="group relative aspect-[16/11] overflow-hidden rounded-[1.4rem] border border-line bg-surface2 text-start sm:aspect-auto sm:min-h-[390px]"
           >
             <img
-              src={images[active]}
+              src={asset(images[active])}
               alt={property.title}
               className="size-full object-cover transition duration-700 group-hover:scale-[1.03]"
             />
@@ -127,7 +128,7 @@ export function SmartGallery({ property }: { property: Property }) {
                     : "border-transparent opacity-85 hover:border-accent/40 hover:opacity-100",
                 )}
               >
-                <img src={image} alt={`${property.title} ${i + 1}`} className="size-full object-cover" />
+                <img src={asset(image)} alt={`${property.title} ${i + 1}`} className="size-full object-cover" />
                 {i === 3 && images.length > 4 ? (
                   <span className="absolute inset-0 grid place-items-center bg-black/55 text-xs font-bold text-white">
                     +{fa(images.length - 4)} عکس
@@ -139,7 +140,7 @@ export function SmartGallery({ property }: { property: Property }) {
         </div>
       ) : property.tour ? (
         <PanoramaViewer
-          image="/images/panorama.jpg"
+          image={asset("/images/panorama.jpg")}
           title={property.title}
           className="aspect-[16/9] w-full sm:aspect-[16/8]"
           hotspots={[
@@ -191,7 +192,7 @@ export function SmartGallery({ property }: { property: Property }) {
             >
               <ChevronRight size={22} />
             </button>
-            <img src={images[active]} alt={property.title} className="max-h-full max-w-full rounded-2xl object-contain" />
+            <img src={asset(images[active])} alt={property.title} className="max-h-full max-w-full rounded-2xl object-contain" />
             <button
               type="button"
               onClick={() => setActive((v) => (v + 1) % images.length)}
@@ -212,7 +213,7 @@ export function SmartGallery({ property }: { property: Property }) {
                   active === i ? "border-accent" : "border-transparent opacity-60",
                 )}
               >
-                <img src={image} alt="" className="size-full object-cover" />
+                <img src={asset(image)} alt="" className="size-full object-cover" />
               </button>
             ))}
           </div>
